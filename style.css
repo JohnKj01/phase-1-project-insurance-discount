@@ -1,0 +1,14 @@
+#main {
+    background-color: rgb(118, 184, 189);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #github-container {
+    display: flex;
+  }
+  
+  ul {
+    list-style: none;
+  }
