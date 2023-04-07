@@ -33,8 +33,6 @@ function handleFilter(inputValue) {
     });
 }
 
-function renderFilteredItem(item) {
-  console.log(item);
-
+function renderFilteredItem(item) {;
   div.innerHTML = `<p>Congratulations! Insurance Cover Available <br>Make Id:${item.MakeId}<br>Make Name:${item.MakeName}<br>Vehicle Type Id:${item.VehicleTypeId}<br>Vehicle Type Name:${item.VehicleTypeName}</p>`;
 }

@@ -13,9 +13,10 @@
   ul {
     list-style: none;
   }
-  button{
-    color: rgb(206, 30, 54);
+  h2{
+    color: brown;
   }
   body{
     background-image: -webkit-image-set();
   }
+  
