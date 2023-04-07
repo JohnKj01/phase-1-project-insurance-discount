@@ -1,29 +1,35 @@
-let form=document.getElementById('githu-form');
-//connecting html form to js
-const vehicleModel= search.split('').join('')
-//declaring vehicleModel as an object
-form.addEventListener("submit",function(e){
-    e.preventDefault()
-    var search=document.getElementById("search").value
-    alert(vehicleModel)
-    //making the form responsive
-})
-li.innerHTML=`<li>${vehicleModel[i].login}</li><p>${vehicleModel[i].HTML_url}</p>/>`;
-vehicleList.appendChild(li)
-//appending the search results to html
-li.addEventListener("click",()=>{
-    fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json`)
-    //fetching users from github
-    .then(response=>response.json)
-    //specifying the results to be json
-    .then(repos=>
-        console.log(repos))
-        for (let i=0;i<repos.length;i++){
-        const reposList=document.querrySelector("#repos-list")
-        //iteration through the json list
-        const ripleli=document.create ('li')
-        ripleli.innnerHTML=`${riple[i].vehicleModel}`
-        reposList.appendChild(ripleLi)
-        }    
+const vehicleAPI =
+  "https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json";
+const submitButton = document.getElementById("submitbutton");
+const clientCarEl = document.getElementById("search-vehicle");
+
+//submit event
+function handleFormSubmit(event) {
+  event.preventDefault();
+  const inputValue = clientCarEl.value;
+  handleFilter(inputValue);
 }
-)
+//activating submit button
+submitButton.addEventListener("click", handleFormSubmit);
+
+function handleFilter(inputValue) {
+  //fetching vehicle api from the web link
+  fetch(vehicleAPI)
+  //specifying that the result should be json
+    .then((res) => res.json())
+    .then((data) => {
+      //extract results data to a variable
+      const result = data.Results;
+
+        //searching the user input along the fetch result
+      for (var i = 0; i < result.length; i++) {
+        if (result[i].MakeName == inputValue) {
+          renderFilteredItem(result[i]);
+        }
+      }
+    });
+}
+
+function renderFilteredItem(item) {
+  console.log(item);
+}
