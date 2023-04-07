@@ -34,5 +34,5 @@ function handleFilter(inputValue) {
 }
 
 function renderFilteredItem(item) {;
-  div.innerHTML = `<p>Congratulations! Insurance Cover Available <br>Make Id:${item.MakeId}<br>Make Name:${item.MakeName}<br>Vehicle Type Id:${item.VehicleTypeId}<br>Vehicle Type Name:${item.VehicleTypeName}</p>`;
+  div.innerHTML = `<p>Congratulations! Discounted insurance cover is vailable for your car<br>Make Id:${item.MakeId}<br>Make Name:${item.MakeName}<br>Vehicle Type Id:${item.VehicleTypeId}<br>Vehicle Type Name:${item.VehicleTypeName}</p>`;
 }
