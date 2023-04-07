@@ -7,7 +7,7 @@ var div = document.getElementById("client-car");
 //submit event
 function handleFormSubmit(event) {
   event.preventDefault();
-  const inputValue = clientCarEl.value;
+  const inputValue = clientCarEl.value.toUpperCase();
   handleFilter(inputValue);
 }
 
