@@ -7,6 +7,7 @@ var div = document.getElementById("client-car");
 //submit event
 function handleFormSubmit(event) {
   event.preventDefault();
+  //converting the input to upperCase to match the online database case
   const inputValue = clientCarEl.value.toUpperCase();
   handleFilter(inputValue);
 }
@@ -33,10 +34,14 @@ function handleFilter(inputValue) {
     });
 }
 
-function renderFilteredItem(item) {;
-  div.innerHTML = `<p>Congratulations! Discounted insurance cover is vailable for your car<br>
-  Discount=25%
+function renderFilteredItem(item) {
+  //appending discount message and vehicle specifications to the user interface
+  div.innerHTML = `<p>Congratulations! you have a 25% discount for your car redeemable by 30/05/2023<br><br>
+  Call 07223445332 | info@goodsamaritan.co.ke<br><br>
   Make Id:${item.MakeId}<br>Make Name:${item.MakeName}<br>
   Vehicle Type Id:${item.VehicleTypeId}<br>
   Vehicle Type Name:${item.VehicleTypeName}</p>`;
 }
+function refresh(){
+        window.location.reload("Refresh")
+      }
