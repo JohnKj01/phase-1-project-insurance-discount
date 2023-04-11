@@ -42,6 +42,8 @@ function renderFilteredItem(item) {
   Vehicle Type Id:${item.VehicleTypeId}<br>
   Vehicle Type Name:${item.VehicleTypeName}</p>`;
 }
+
+//refresh button for manual reload
 function refresh(){
         window.location.reload("Refresh")
       }
